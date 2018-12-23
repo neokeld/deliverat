@@ -17,6 +17,7 @@ Learn Kafka connecting the microservices of an imaginary delivery service "Deliv
 ## French Touch
 
 Une commande is an order in French.
+
 Cuisto is a slang word to say cuisinier which means a chef.
 
 ## Music
@@ -24,6 +25,10 @@ This repo was created listening to Asteroid - Time :guitar:
 
 ## Thanks
 Spring Initializr for their useful tool to create Spring projects.
+
+The underrated DiUS/java-faker that produce fun and useful data for demos.
+
+## License
 
 Copyright (c) 2018 Arnaud Duforat
 
