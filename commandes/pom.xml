@@ -19,10 +19,27 @@
 	</properties>
 
 	<dependencies>
+		<!-- Spring dependencies -->
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
+
+		<!-- Test Runner dependencies -->
+		
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+		</dependency>
+
+		<!-- Other runtime and test scoped dependencies -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
