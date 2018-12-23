@@ -1,6 +1,8 @@
 # deliverat
 Monorepo for the KataKafka
 
+Learn Kafka connecting the microservices of an imaginary delivery service "Deliverat".
+
 ## Music
 This repo was created listening to Asteroid - Time :guitar:
 
