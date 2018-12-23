@@ -1,7 +1,8 @@
 package fr.duforat.demos.commandes.dto;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.github.javafaker.Address;
 import com.github.javafaker.Faker;
@@ -19,7 +20,7 @@ public class Checkout {
     private String message;
     private List<Cart> cart;
     
-    public static List<Checkout> fakeCheckoutsFactory() {
+    public static Checkout fakeCheckoutFactory() {
     	final Checkout c = new Checkout();
     	final Faker faker = new Faker();
     	final Address a = faker.address();
@@ -34,9 +35,14 @@ public class Checkout {
     	c.setPhone(faker.phoneNumber().phoneNumber());
     	c.setMessage(faker.lorem().sentence(10));
     	c.setCart(Cart.fakeCartsFactory());
-    	List<Checkout> l = new ArrayList<>();
-    	l.add(c);
-    	return l;
+    	return c;
+    }
+    public static List<Checkout> fakeCheckoutsFactory() {
+    	Faker faker = new Faker();
+    	final Stream<Checkout> streamGenerated = Stream
+    			.generate(Checkout::fakeCheckoutFactory)
+    			.limit(faker.number().numberBetween(1, 4));
+    	return streamGenerated.collect(Collectors.toList());
     }
       
 	public List<Cart> getCart() {

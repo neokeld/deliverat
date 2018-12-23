@@ -1,7 +1,8 @@
 package fr.duforat.demos.commandes.dto;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.github.javafaker.Faker;
 
@@ -10,16 +11,21 @@ public class Cart {
     private String title;
     private int quantity; 
     private float price;
-    public static List<Cart> fakeCartsFactory() {
+    public static Cart fakeCartFactory() {
     	Faker faker = new Faker();
     	Cart c = new Cart();
     	c.setId(faker.idNumber().valid());
     	c.setTitle(faker.funnyName().name());
     	c.setQuantity(faker.number().numberBetween(1, 10));
     	c.setPrice(faker.number().numberBetween(10, 50));
-    	List<Cart> l = new ArrayList<>();
-    	l.add(c);
-    	return l;
+    	return c;
+    }
+    public static List<Cart> fakeCartsFactory() {
+    	Faker faker = new Faker();
+    	final Stream<Cart> streamGenerated = Stream
+    			.generate(Cart::fakeCartFactory)
+    			.limit(faker.number().numberBetween(1, 2));
+    	return streamGenerated.collect(Collectors.toList());
     }
 	public String getId() {
 		return id;
