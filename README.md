@@ -22,6 +22,9 @@ Cuisto is a slang word to say cuisinier which means a chef.
 ## Music
 This repo was created listening to Asteroid - Time :guitar:
 
+## Thanks
+Spring Initializr for their useful tool to create Spring projects.
+
 Copyright (c) 2018 Arnaud Duforat
 
 See LICENSE file to know more (MIT License)
