@@ -14,6 +14,11 @@ Learn Kafka connecting the microservices of an imaginary delivery service "Deliv
 | 7000 | Webflux websocket netty Cuisto   |
 | 8000 | Webflux websocket netty Commande |
 
+## French Touch
+
+Une commande is an order in French.
+Cuisto is a slang word to say cuisinier which means a chef.
+
 ## Music
 This repo was created listening to Asteroid - Time :guitar:
 
