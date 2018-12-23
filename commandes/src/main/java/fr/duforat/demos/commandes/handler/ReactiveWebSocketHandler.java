@@ -12,6 +12,7 @@ import org.springframework.web.reactive.socket.WebSocketSession;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import fr.duforat.demos.commandes.dto.Checkout;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -26,7 +27,7 @@ public class ReactiveWebSocketHandler implements WebSocketHandler {
     // Generate Flux of Json Events
     private Flux<String> eventFlux = Flux.generate(sink -> {
         try {
-        	final String jsonStr = json.writeValueAsString("test value");
+        	final String jsonStr = json.writeValueAsString(Checkout.fakeCheckoutsFactory());
         	logger.info(jsonStr);
             sink.next(jsonStr);
         } catch (JsonProcessingException e) {
