@@ -23,6 +23,19 @@ Cuisto is a slang word to say cuisinier which means a chef.
 ## Music
 This repo was created listening to Asteroid - Time :guitar:
 
+## Notes
+In this part, we will do some clarifications on things often unknown about WebFluxTest in the functional style of declaring RouterFunction in Spring 5. It is a land still undiscovered !
+
+The @WebFluxTest annotation does not support the testing of functional style RouterFunction, but only WebFlux annotated controllers (that use @Get/@Post endpoints). See this github issue : https://github.com/spring-projects/spring-boot/issues/10683
+
+As seen is this issue, the implementation of @WebFluxTest can't detect RouterFunction beans (like it can do with @Controller classes) because in the new functional style implementation introduced in Spring 5 the RouterFunction is one or more simple beans that can be defined in @Configuration classes without means of recognition.
+
+The kizux user pointed out that WebTestClient.bindToApplicationContext can be use as a workaround.
+
+An other example from Mario Gray can be seen here : https://www.sudoinit5.com/post/spring-boot-testing-producer/
+
+I add that using @SpringBootTest(classes = MenusApplication.class) you will be able to use @Autowired in your test classes to access your functional route config and bind it to a WebTestClient with WebTestClient.bindToRouterFunction.
+
 ## Thanks
 Spring Initializr for their useful tool to create Spring projects.
 
