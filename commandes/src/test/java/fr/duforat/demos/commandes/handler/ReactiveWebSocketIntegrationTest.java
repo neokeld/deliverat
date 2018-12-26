@@ -12,6 +12,7 @@ import org.springframework.web.reactive.socket.client.ReactorNettyWebSocketClien
 import org.springframework.web.reactive.socket.client.WebSocketClient;
 
 import fr.duforat.demos.commandes.CommandesApplication;
+import reactor.core.publisher.Flux;
 
 @SpringBootTest(classes = CommandesApplication.class)
 public class ReactiveWebSocketIntegrationTest {
@@ -21,9 +22,7 @@ public class ReactiveWebSocketIntegrationTest {
     @Test
     public void testNotificationsOnUpdates() throws Exception {
 
-    	long durationInterval = 800;
-        int countEmitedEvents = 2;
-        long margin = 900;
+        int emitedEventsNumber = 2;
         AtomicLong counter = new AtomicLong();
         URI uri = URI.create("ws://localhost:7000/event-emitter");
 
@@ -33,14 +32,13 @@ public class ReactiveWebSocketIntegrationTest {
                 .receive()
                 .map(WebSocketMessage::getPayloadAsText)
                 .doOnNext(str -> counter.incrementAndGet())
+                .zipWith(Flux.range(1, emitedEventsNumber))
                 .then()
                 .log();
 
-        }).subscribe();
+        }).block();
 
-        Thread.sleep(countEmitedEvents * durationInterval + margin);
-
-        Assertions.assertThat(counter.get()).isEqualTo(countEmitedEvents);
+        Assertions.assertThat(counter.get()).isEqualTo(emitedEventsNumber);
     }
 	
 }
