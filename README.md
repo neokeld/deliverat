@@ -1,4 +1,6 @@
 # deliverat
+[![Build Status](https://travis-ci.org/neokeld/deliverat.png?branch=master)](https://travis-ci.org/neokeld/deliverat) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2421/badge)](https://bestpractices.coreinfrastructure.org/projects/2421)
+
 Monorepo for the KataKafka
 
 Learn Kafka connecting the microservices of an imaginary delivery service "Deliverat".
