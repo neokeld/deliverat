@@ -26,9 +26,9 @@ public class MenuService {
 				return this.menuRepository.findAll();
 		}
 
-		public Mono<Menu> create(String title, String desc, BigDecimal price) {
+		public Mono<Menu> create(String title, String desc, BigDecimal price, String picture, boolean popular) {
 				return this.menuRepository
-					.save(new Menu(title, desc, price))
+					.save(new Menu(title, desc, price, picture, popular))
 					.doOnSuccess(menu -> log.info("New Event: {}", menu));
 		}
 

@@ -33,7 +33,9 @@ public class MenuHandler {
 					.flatMap(toWrite -> this.menuService.create(
 							toWrite.getTitle(),
 							toWrite.getDescription(),
-							toWrite.getPrice())
+							toWrite.getPrice(),
+							toWrite.getPicture(),
+							toWrite.isPopular())
 							);
 				return defaultWriteResponse(flux);
 		}
