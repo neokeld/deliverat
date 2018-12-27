@@ -48,6 +48,15 @@ If you want to check that an infinite flux return at least 2 elements, you can z
 
 See this commit where i replace a dirty (and nondeterministic) thread.sleep hack with a zip : [5e5ff5c4d8bcfb8e50c7e96b07dbee66bdb48462](https://github.com/neokeld/deliverat/commit/5e5ff5c4d8bcfb8e50c7e96b07dbee66bdb48462)
 
+### Automating Integration Testing with Maven, Spring and Travis CI
+The recipe is simple :
+* Configure spring-boot-maven-plugin in pom.xml to start service before running integration tests and stop it after.
+* Add IT at the end of the name of integration tests classes to execute them with Failsafe instead of Surefire.
+* Configure your service port as you wish (for example in application.properties in test directory).
+* Use mvn verify to run your ITs.
+
+See this commit : [4a05a0c4f3cdb30ea9212f8be904eab80ef7ab7c](https://github.com/neokeld/deliverat/commit/4a05a0c4f3cdb30ea9212f8be904eab80ef7ab7c)
+
 ## Thanks
 Spring Initializr for their useful tool to create Spring projects.
 
