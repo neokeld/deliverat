@@ -15,7 +15,7 @@ import fr.duforat.demos.commandes.CommandesApplication;
 import reactor.core.publisher.Flux;
 
 @SpringBootTest(classes = CommandesApplication.class)
-public class ReactiveWebSocketIntegrationTest {
+public class ReactiveWebSocketIT {
 
     private final WebSocketClient socketClient = new ReactorNettyWebSocketClient();
 

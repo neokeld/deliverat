@@ -1,4 +1,4 @@
 language: java
 jdk:
   - oraclejdk8
-script: cd commandes && mvn test && cd ../menus && mvn test
+script: cd commandes && mvn verify && cd ../menus && mvn verify
