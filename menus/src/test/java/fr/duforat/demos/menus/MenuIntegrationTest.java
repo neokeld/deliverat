@@ -48,7 +48,7 @@ public class MenuIntegrationTest {
 
 		@Test
 		public void save() {
-				Menu data = new Menu("test", "test", new BigDecimal("14.00"));
+				Menu data = new Menu("test", "test", new BigDecimal("14.00"), "//f.roocdn.com/images/menu_items/1583350/item-image.jpg", true);
 				MediaType jsonUtf8 = MediaType.APPLICATION_JSON_UTF8;
 				WebTestClient
 					.bindToRouterFunction(functionalRouteConfig.routes(menuHandler))

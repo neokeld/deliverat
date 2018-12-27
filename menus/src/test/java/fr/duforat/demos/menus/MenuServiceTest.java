@@ -29,9 +29,9 @@ public class MenuServiceTest {
 		
 		@Test
 		public void getAll() {
-			Mono<Menu> p1 = repository.save(new Menu("Canard", "Du canard", new BigDecimal("14.00")));
-			Mono<Menu> p2 = repository.save(new Menu("Armagnac", "Une boisson", new BigDecimal("30.00")));
-			Mono<Menu> p3 = repository.save(new Menu("Chocolatine", "Une vienoiserie", new BigDecimal("0.80")));
+			Mono<Menu> p1 = repository.save(new Menu("Canard", "Du canard", new BigDecimal("14.00"), "//f.roocdn.com/images/menu_items/3905693/item-image.jpg", true));
+			Mono<Menu> p2 = repository.save(new Menu("Armagnac", "Une boisson", new BigDecimal("30.00"), "//f.roocdn.com/images/menu_items/1583350/item-image.jpg", true));
+			Mono<Menu> p3 = repository.save(new Menu("Chocolatine", "Une vienoiserie", new BigDecimal("0.80"), "//f.roocdn.com/images/menu_items/3905693/item-image.jpg", false));
 
 			Flux<Menu> saved = Flux.concat(p1, p2, p3);
 			
@@ -49,7 +49,7 @@ public class MenuServiceTest {
 
 		@Test
 		public void save() {
-				Mono<Menu> menuMono = this.service.create("Pâté", "De canard", new BigDecimal("4.90"));
+				Mono<Menu> menuMono = this.service.create("Pâté", "De canard", new BigDecimal("4.90"), "//f.roocdn.com/images/menu_items/1583350/item-image.jpg", true);
 				StepVerifier
 					.create(menuMono)
 					.expectNextMatches(saved -> StringUtils.hasText(saved.getId()))
