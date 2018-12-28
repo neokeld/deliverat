@@ -62,6 +62,8 @@ Spring Initializr for their useful tool to create Spring projects.
 
 The underrated DiUS/java-faker that produce fun and useful data for demos.
 
+The brilliant [json-server](https://github.com/typicode/json-server) which is the fake json rest backend of your dreams.
+
 ## License
 
 Copyright (c) 2018 Arnaud Duforat
