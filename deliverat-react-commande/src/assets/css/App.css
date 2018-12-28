@@ -1,0 +1,356 @@
+@import "fonts.css";
+
+.screenSize {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+body {
+  background: white;
+  font-family: "Adelle Sans";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: "Stratos Deliveroo Web";
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  height: 50px;
+  overflow: hidden;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  border-bottom: solid 1px #eeeeee;
+  width: 100%;
+  z-index: 100;
+}
+
+.restDescription {
+  display: flex;
+  flex: 1;
+  padding: 80px 0;
+  height: 150px;
+}
+
+.restaurantImage {
+  height: 100%;
+  width: 350px;
+  object-fit: cover;
+  margin-left: 30px;
+  border-radius: 2px;
+}
+
+.grey-background {
+  background-color: #eeeeee;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Cart {
+  width: 300px;
+  padding: 15px;
+  background-color: white;
+  height: fit-content;
+  min-height: 200px;
+  box-shadow: 0 0 30px rgba(57, 57, 57, 0.1);
+}
+
+.sticky-cart {
+  position: fixed;
+  top: 0;
+}
+
+.cart-validation {
+  display: flex;
+  padding: 5px;
+  text-align: center;
+  border-radius: 2px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cart-full {
+  background-color: #21cbbc;
+  color: white;
+}
+
+.cart-full:hover {
+  background-color: #18a295;
+  cursor: pointer;
+}
+
+.empty-cart-validation {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.empty-cart {
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-size: 14px;
+}
+
+.cart-content {
+  color: grey;
+  font-size: 14px;
+}
+.cart-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+
+.cart-button {
+  color: #21cbbc;
+  font-size: 15px;
+  margin: 5px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.cart-button:hover {
+  color: #18a295;
+  border: solid #18a295 2px;
+  cursor: pointer;
+  border: none;
+}
+
+.cart-menu-title {
+  flex: 1;
+  margin-left: 5px;
+}
+.subTotal {
+  padding: 5px 0;
+  border-top: solid 1px #cccccc;
+}
+.basket-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.cart-total {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: solid 2px #bbbbbb;
+  font-weight: bold;
+  color: #666666;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.foodCard {
+  width: calc(50% - 60px);
+  margin: 0 20px 20px 0;
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  height: 110px;
+  justify-content: space-between;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 2px;
+  border-left: solid white 5px;
+}
+
+.green-line {
+  border-left: solid 4px #21cbbc;
+  transform: scaleY(0);
+}
+
+.selected-card {
+  border-left: solid 4px #21cbbc;
+  transform: scaleY(1);
+  transition-timing-function: transform 0.15s ease-in-out;
+}
+
+.foodCard:hover {
+  box-shadow: 0 4px 8px 0 rgba(180, 180, 180, 0.2),
+    0 6px 20px 0 rgba(180, 180, 180, 0.19);
+  background: white;
+  cursor: pointer;
+}
+
+.foodPic {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+
+.foodChoice {
+  flex: 1;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.foodDescription {
+  font-size: 14px;
+  line-height: 19px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.foodPrice {
+  font-size: 16px;
+  line-height: 22px;
+  color: grey;
+  margin: 0;
+}
+
+form {
+  color: #757575;
+}
+
+.inline {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.form-element {
+  flex: 1;
+  margin: 5px 0;
+}
+
+input {
+  width: calc(100% - 30px);
+  height: 30px;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  font-size: 12px;
+  border: solid 1px #cccccc;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.checkout {
+  display: flex;
+  padding: 80px 0;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.form-frame {
+  padding: 40px;
+  flex: 1;
+  margin-right: 30px;
+  height: fit-content;
+}
+
+.cart-checkout {
+  width: 300px;
+  min-height: 150px;
+  height: fit-content;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.address-details {
+  font-size: 12px;
+}
+
+textarea {
+  width: calc(100% - 30px);
+  height: 50px;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: solid 1px #cccccc;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.end-of-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+hr {
+  width: 100%;
+}
+.confirmation-text {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  color: black;
+}
+
+.confirmation-button {
+  width: fit-content;
+  height: 50px;
+  border-radius: 2px;
+  margin: 10px auto;
+  padding: 5px 20px;
+  font-size: 12px;
+  background-color: #21cbbc;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.confirmation-button:hover {
+  background-color: #18a295;
+  cursor: pointer;
+}
