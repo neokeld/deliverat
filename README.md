@@ -64,6 +64,8 @@ The underrated DiUS/java-faker that produce fun and useful data for demos.
 
 The brilliant [json-server](https://github.com/typicode/json-server) which is the fake json rest backend of your dreams.
 
+The convenient for two years [react-lines-ellipsis](https://github.com/xiaody/react-lines-ellipsis).
+
 ## License
 
 Copyright (c) 2018 Arnaud Duforat
