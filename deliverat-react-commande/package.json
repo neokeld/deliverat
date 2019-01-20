@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "mockserver": "node ./node_modules/json-server/bin/index.js --port 4000 --watch json/deliveroo-menus.json"
+    "mockserver": "node ./node_modules/json-server/lib/cli/bin.js --port 4000 --watch json/deliveroo-menus.json"
   },
   "eslintConfig": {
     "extends": "react-app"
