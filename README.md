@@ -5,6 +5,10 @@ Monorepo for the KataKafka
 
 Learn Kafka connecting the microservices of an imaginary delivery service "Deliverat".
 
+## Design
+
+![KataKafka Architecture](design/KataKafka.png)
+
 ## Services Cartography
 
 | Port | Service                          |
