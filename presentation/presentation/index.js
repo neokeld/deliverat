@@ -28,6 +28,8 @@ import {
 import createTheme from 'spectacle/lib/themes/default';
 
 const images = {
+  cap: require('../assets/cap.png'),
+  archi: require('../assets/Archi.png'),
   design: require('../assets/KataKafka.png')
 };
 
@@ -59,6 +61,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} caps lineHeight={1} textColor="secondary">
             Kata Kafka
           </Heading>
+		  <Image src={images.cap} width={190} />
           <Heading textColor="tertiary" size={4}>
             Capgemini
           </Heading>
@@ -66,15 +69,12 @@ export default class Presentation extends React.Component {
             Arnaud Duforat
 		  </Heading>
           <Heading textColor="tertiary" size={4}>
-            20/01/2018
+            20/01/2019
 		  </Heading>
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={2} textColor="primary" caps>Architecture</Heading>
-          <Heading size={4} textColor="secondary">Entrypoint</Heading>
-          <Heading size={4} textColor="secondary">Agent</Heading>
-          <Heading size={4} textColor="secondary">Redux</Heading>
-          <Heading size={4} textColor="secondary">Components</Heading>
+          <Image src={images.archi} width={364} />
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
 			<List>
