@@ -73,15 +73,32 @@ export default class Presentation extends React.Component {
             20/01/2019
 		  </Heading>
         </Slide>
+		<Slide>
+          <Heading size={2} textColor="tertiary" caps>Kata</Heading>
+		  <Text>Learn how to play with code together.</Text>
+        </Slide>
 		<Slide bgColor="secondary">
           <Image src={images.dojo} width={600} />
 		  <Text textColor="primary" textSize={12}>Hino Terumasa - Aikido Hombu - UKA Spring Course 2018 - Penny Maycock - CC BY 2.0</Text>
         </Slide>
-        <Slide bgColor="secondary">
-          <Heading size={2} textColor="primary" caps>Architecture</Heading>
-          <Image src={images.archi} width={364} />
+		<Slide>
+		  <List>
+			<Heading size={6} textColor="tertiary" caps>In the dojo</Heading>
+			<ListItem textColor="secondary">Success comes only after doing</ListItem>
+			<ListItem textColor="secondary">Make mistakes</ListItem>
+			<ListItem textColor="secondary">Experiment</ListItem>
+			<ListItem textColor="secondary">Improve</ListItem>
+			<ListItem textColor="secondary">No pressure</ListItem>
+		  </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
+		<Slide bgColor="secondary">
+		  <Text textColor="primary">This kata arose from some discussions we’ve been having around microservices and messaging at Bordeaux. The problem domain proposed here is an imaginary delivery service "Deliverat". This case is a bit special because I will provide the services and we will only connect them.</Text>
+        </Slide>
+		<Slide>
+		  <Heading size={2} textColor="tertiary" caps>Goal</Heading>
+		  <Text>The goal of this kata is to practice with messaging concepts and play with Kafka.</Text>
+		</Slide>
+		<Slide transition={['fade']} bgColor="tertiary">
 			<List>
 				  <Heading size={6} textColor="primary" caps>General functionalities</Heading>
 				  <ListItem textColor="secondary">As a customer, see menu of a restaurant</ListItem>
@@ -90,16 +107,20 @@ export default class Presentation extends React.Component {
 				  <ListItem textColor="secondary">As a chef, see orders for my restaurant</ListItem>
 			</List>
         </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>Architecture</Heading>
+          <Image src={images.archi} width={364} />
+        </Slide>
 		<Slide>
-          <Heading size={6} textColor="tertiary" caps>Components</Heading>
 		  <Image src={images.design} width={600} />
+		  <Text textSize={12} textColor="tertiary" caps>Architecture</Text>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
 			<Heading size={6} textColor="primary" caps>Components</Heading>
 			<Table>
 			  <TableHeader>
 				<TableRow>
-				  <TableHeaderItem>Components</TableHeaderItem>
+				  <TableHeaderItem>Component</TableHeaderItem>
 				  <TableHeaderItem>Aim</TableHeaderItem>
 				</TableRow>
 			  </TableHeader>
