@@ -29,6 +29,7 @@ import createTheme from 'spectacle/lib/themes/default';
 
 const images = {
   cap: require('../assets/cap.png'),
+  dojo: require('../assets/dojo.jpg'),
   archi: require('../assets/Archi.png'),
   design: require('../assets/KataKafka.png')
 };
@@ -71,6 +72,10 @@ export default class Presentation extends React.Component {
           <Heading textColor="tertiary" size={4}>
             20/01/2019
 		  </Heading>
+        </Slide>
+		<Slide bgColor="secondary">
+          <Image src={images.dojo} width={600} />
+		  <Text textColor="primary" textSize={12}>Hino Terumasa - Aikido Hombu - UKA Spring Course 2018 - Penny Maycock - CC BY 2.0</Text>
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={2} textColor="primary" caps>Architecture</Heading>
