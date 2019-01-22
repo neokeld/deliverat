@@ -68,15 +68,17 @@ See this commit : [4a05a0c4f3cdb30ea9212f8be904eab80ef7ab7c](https://github.com/
 ## Thanks
 Spring Initializr for their useful tool to create Spring projects.
 
-The underrated DiUS/java-faker that produce fun and useful data for demos.
+The underrated [java-faker](https://github.com/DiUS/java-faker) that produce fun and useful data for demos.
 
 The brilliant [json-server](https://github.com/typicode/json-server) which is the fake json rest backend of your dreams.
 
 The convenient for two years [react-lines-ellipsis](https://github.com/xiaody/react-lines-ellipsis).
 
+The spectacular [spectacle](https://github.com/FormidableLabs/spectacle).
+
 ## License
 
 Copyright (c) 2018 Arnaud Duforat
 
-See LICENSE file to know more (MIT License)
+See LICENSE file to know more (MIT License).
 

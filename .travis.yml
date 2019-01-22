@@ -1,6 +1,6 @@
 language: java
 jdk:
   - oraclejdk8
-script: cd commandes && mvn verify && cd ../menus && mvn verify
+script: cd commandes && mvn verify && cd ../cartes && mvn verify
 after_success:
 - bash <(curl -s https://codecov.io/bash)
