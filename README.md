@@ -18,7 +18,7 @@ Learn Kafka connecting the microservices of an imaginary delivery service "Deliv
 | 5000 | React Cuisto dev server          |
 | 6000 | Websocker js dev server          |
 | 7000 | Webflux websocket netty Commande |
-| 8000 | Webflux rest netty Menus         |
+| 8000 | Webflux rest netty Cartes         |
 
 ## French Touch
 
@@ -26,10 +26,12 @@ Une commande is an order in French.
 
 Cuisto is a slang word to say cuisinier which means a chef.
 
+Une carte is a menu in French.
+
 ## Music
 This repo was created listening to Asteroid - Time :guitar:
 
-The menu project was created listening to Andromeda Space Ritual - Jupiter is Electric
+The cartes project was created listening to Andromeda Space Ritual - Jupiter is Electric
 
 The presentation was created listening to Heilung - Alfadhirhaiti
 
