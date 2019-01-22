@@ -50,6 +50,10 @@ const theme = createTheme(
   }
 );
 
+const Logo = () => (
+  <Image src={images.cap} width={64} style="position:absolute; top:10px; right:20px;" />
+);
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -66,7 +70,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="tertiary" size={4}>
             Capgemini
           </Heading>
-          <Heading textColor="tertiary" size={4}>
+          <Heading textColor="secondary" size={4}>
             Arnaud Duforat
 		  </Heading>
           <Heading textColor="tertiary" size={4}>
@@ -74,14 +78,17 @@ export default class Presentation extends React.Component {
 		  </Heading>
         </Slide>
 		<Slide>
+		  <Logo></Logo>
           <Heading size={2} textColor="tertiary" caps>Kata</Heading>
 		  <Text>Learn how to play with code together.</Text>
         </Slide>
 		<Slide bgColor="secondary">
+		  <Logo></Logo>
           <Image src={images.dojo} width={600} />
 		  <Text textColor="primary" textSize={12}>Hino Terumasa - Aikido Hombu - UKA Spring Course 2018 - Penny Maycock - CC BY 2.0</Text>
         </Slide>
 		<Slide>
+		  <Logo></Logo>
 		  <List>
 			<Heading size={6} textColor="tertiary" caps>In the dojo</Heading>
 			<ListItem textColor="secondary">Success comes only after doing</ListItem>
@@ -92,9 +99,11 @@ export default class Presentation extends React.Component {
 		  </List>
         </Slide>
 		<Slide bgColor="secondary">
+		  <Logo></Logo>
 		  <Text textColor="primary">This kata arose from some discussions we’ve been having around microservices and messaging at Bordeaux. The problem domain proposed here is an imaginary delivery service "Deliverat". This case is a bit special because I will provide the services and we will only connect them.</Text>
         </Slide>
 		<Slide>
+		  <Logo></Logo>
 		  <Heading size={2} textColor="tertiary" caps>Goal</Heading>
 		  <Text>The goal of this kata is to practice with messaging concepts and play with Kafka.</Text>
 		</Slide>
@@ -108,14 +117,17 @@ export default class Presentation extends React.Component {
 			</List>
         </Slide>
         <Slide bgColor="secondary">
+		  <Logo></Logo>
           <Heading size={2} textColor="primary" caps>Architecture</Heading>
           <Image src={images.archi} width={364} />
         </Slide>
 		<Slide>
+		  <Logo></Logo>
 		  <Image src={images.design} width={600} />
 		  <Text textSize={12} textColor="tertiary" caps>Architecture</Text>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+		    <Logo></Logo>
 			<Heading size={6} textColor="primary" caps>Components</Heading>
 			<Table>
 			  <TableHeader>
@@ -145,12 +157,42 @@ export default class Presentation extends React.Component {
 			</Table>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+		  <Logo></Logo>
           <Heading size={6} textColor="secondary" caps>Testing</Heading>
           <List>
 			<ListItem>Json Server</ListItem>
 			<ListItem>Websocket Server</ListItem>
-            <ListItem>Kafka</ListItem>
 	      </List>
+        </Slide>
+		<Slide>
+		  <Logo></Logo>
+		  <Heading size={2} textColor="tertiary" caps>Kafka</Heading>
+		</Slide>
+		<Slide bgColor="secondary">
+		  <Logo></Logo>
+          <Heading size={2} textColor="primary" caps>Kafka</Heading>
+		  <List>
+			  <Text textColor="primary">Kafka is a <b>streaming platform</b>.</Text>
+			  <Text textColor="primary">A distinct tool in your toolbox, like a relational database or a mail server.</Text>
+			  <Text textColor="primary">A streaming platform encourages architectures that have an emphasis on <b>events</b> and <b>changes to data</b>.</Text>
+		  </List>
+        </Slide>
+		<Slide>
+		  <Logo></Logo>
+		  <Heading size={2} textColor="tertiary" caps>Practice</Heading>
+		</Slide>
+		<Slide bgColor="secondary">
+		  <Logo></Logo>
+          <Heading size={2} textColor="primary" caps>Practice</Heading>
+		  <Text textColor="primary">We will connect the Cartes and Commandes backend microservices.</Text>
+        </Slide>
+		<Slide bgColor="secondary">
+		  <Logo></Logo>
+          <Heading size={2} textColor="primary" caps>End of Day 1</Heading>
+        </Slide>
+		<Slide bgColor="secondary">
+		  <Logo></Logo>
+          <Heading size={2} textColor="primary" caps>End of Day 2</Heading>
         </Slide>
       </Deck>
     );
