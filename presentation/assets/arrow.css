@@ -1,0 +1,57 @@
+.arrow-wrapper svg {
+  width: 100px;
+  height: auto;
+  margin: 0 2rem;
+  overflow: visible;
+}
+.arrow-wrapper svg polygon, .arrow-wrapper svg path {
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: #EA2D2E;
+}
+.arrow-wrapper svg .arrow {
+  animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-wrapper svg .arrow-fixed {
+  animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-wrapper svg .arrow-back {
+  animation: arrow-back-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+
+@keyframes arrow-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-0.1rem);
+  }
+  100% {
+    transform: translateX(2rem);
+    opacity: 0;
+  }
+}
+@keyframes arrow-fixed-anim {
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes arrow-back-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(-3rem);
+  }
+  5% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}

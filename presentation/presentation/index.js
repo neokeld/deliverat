@@ -10,6 +10,7 @@ import {
   Deck,
   Heading,
   Image,
+  Layout,
   List,
   ListItem,
   Notes,
@@ -31,11 +32,17 @@ const images = {
   cap: require('../assets/cap.png'),
   dojo: require('../assets/dojo.jpg'),
   archi: require('../assets/Archi.png'),
-  design: require('../assets/KataKafka.png')
+  design: require('../assets/KataKafka.png'),
+  java: require('../assets/java.png')
 };
 
 // Require CSS
 require('normalize.css');
+
+// Require arrow css
+require('../assets/arrow.css');
+// Import arrow component
+import { Arrow } from '../assets/arrow';
 
 const theme = createTheme(
   {
@@ -185,6 +192,15 @@ export default class Presentation extends React.Component {
 		  <Logo></Logo>
           <Heading size={2} textColor="primary" caps>Practice</Heading>
 		  <Text textColor="primary">We will connect the Cartes and Commandes backend microservices.</Text>
+		  <Table>
+			  <TableBody>
+				<TableRow>
+				  <TableItem><Image src={images.java} width={129} /></TableItem>
+				  <TableItem><Arrow></Arrow></TableItem>
+				  <TableItem><Image src={images.java} width={129} /></TableItem>
+				</TableRow>
+			  </TableBody>
+		  </Table>
         </Slide>
 		<Slide bgColor="secondary">
 		  <Logo></Logo>
