@@ -1,9 +1,9 @@
-package fr.duforat.demos.menus.handler;
+package fr.duforat.demos.cartes.handler;
 
 import java.net.URI;
 
-import fr.duforat.demos.menus.domain.Menu;
-import fr.duforat.demos.menus.service.MenuService;
+import fr.duforat.demos.cartes.domain.Menu;
+import fr.duforat.demos.cartes.service.MenuService;
 
 import org.reactivestreams.Publisher;
 import org.springframework.http.MediaType;
@@ -15,11 +15,11 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
-public class MenuHandler {
+public class CartesHandler {
 
 		private final MenuService menuService;
 
-		public MenuHandler(MenuService menuService) {
+		public CartesHandler(MenuService menuService) {
 				this.menuService = menuService;
 		}
 

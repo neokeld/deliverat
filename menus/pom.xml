@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>fr.duforat.demos</groupId>
-    <artifactId>menus</artifactId>
+    <artifactId>cartes</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>menus</name>
+    <name>cartes</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

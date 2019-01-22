@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus.repository;
+package fr.duforat.demos.cartes.repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import fr.duforat.demos.menus.domain.Menu;
+import fr.duforat.demos.cartes.domain.Menu;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

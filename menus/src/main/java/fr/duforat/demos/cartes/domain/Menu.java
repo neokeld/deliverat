@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus.domain;
+package fr.duforat.demos.cartes.domain;
 
 import java.math.BigDecimal;
 import java.util.UUID;

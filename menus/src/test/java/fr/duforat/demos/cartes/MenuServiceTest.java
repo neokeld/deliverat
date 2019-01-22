@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus;
+package fr.duforat.demos.cartes;
 
 import java.math.BigDecimal;
 import java.util.function.Predicate;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.util.StringUtils;
 
-import fr.duforat.demos.menus.domain.Menu;
-import fr.duforat.demos.menus.repository.MenuRepository;
-import fr.duforat.demos.menus.service.MenuService;
+import fr.duforat.demos.cartes.domain.Menu;
+import fr.duforat.demos.cartes.repository.MenuRepository;
+import fr.duforat.demos.cartes.service.MenuService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;

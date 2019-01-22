@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus.config;
+package fr.duforat.demos.cartes.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

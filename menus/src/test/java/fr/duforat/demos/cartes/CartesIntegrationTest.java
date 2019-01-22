@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus;
+package fr.duforat.demos.cartes;
 
 import java.math.BigDecimal;
 
@@ -10,22 +10,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import fr.duforat.demos.menus.MenusApplication;
-import fr.duforat.demos.menus.config.MenuEndpointConfiguration;
-import fr.duforat.demos.menus.domain.Menu;
-import fr.duforat.demos.menus.handler.MenuHandler;
+import fr.duforat.demos.cartes.CartesApplication;
+import fr.duforat.demos.cartes.config.CartesEndpointConfiguration;
+import fr.duforat.demos.cartes.domain.Menu;
+import fr.duforat.demos.cartes.handler.CartesHandler;
 import reactor.core.publisher.Mono;
 
-@SpringBootTest(classes = MenusApplication.class)
-public class MenuIntegrationTest {
+@SpringBootTest(classes = CartesApplication.class)
+public class CartesIntegrationTest {
 
 		@Autowired
-	    private MenuEndpointConfiguration functionalRouteConfig;
+	    private CartesEndpointConfiguration functionalRouteConfig;
 		
 		@Autowired
-		private MenuHandler menuHandler;
+		private CartesHandler menuHandler;
 		
-		private static final Logger log = LoggerFactory.getLogger(MenuIntegrationTest.class);
+		private static final Logger log = LoggerFactory.getLogger(CartesIntegrationTest.class);
 		
 		@Test
 		public void getAll() {
@@ -36,7 +36,7 @@ public class MenuIntegrationTest {
 					.bindToRouterFunction(functionalRouteConfig.routes(menuHandler))
 					.build()
 					.get()
-					.uri("/menus")
+					.uri("/cartes")
 					.accept(MediaType.APPLICATION_JSON_UTF8)
 					.exchange()
 					.expectStatus().isOk()
@@ -54,7 +54,7 @@ public class MenuIntegrationTest {
 					.bindToRouterFunction(functionalRouteConfig.routes(menuHandler))
 					.build()
 					.post()
-					.uri("/menus")
+					.uri("/cartes")
 					.contentType(jsonUtf8)
 					.body(Mono.just(data), Menu.class)
 					.exchange()

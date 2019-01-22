@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus.repository;
+package fr.duforat.demos.cartes.repository;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

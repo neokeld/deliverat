@@ -1,13 +1,13 @@
-package fr.duforat.demos.menus;
+package fr.duforat.demos.cartes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MenusApplication {
+public class CartesApplication {
 
 		public static void main(String[] args) {
-				SpringApplication.run(MenusApplication.class, args);
+				SpringApplication.run(CartesApplication.class, args);
 		}
 }
 

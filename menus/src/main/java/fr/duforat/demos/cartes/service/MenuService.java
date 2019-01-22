@@ -1,4 +1,4 @@
-package fr.duforat.demos.menus.service;
+package fr.duforat.demos.cartes.service;
 
 import java.math.BigDecimal;
 
@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.duforat.demos.menus.domain.Menu;
-import fr.duforat.demos.menus.repository.MenuRepository;
+import fr.duforat.demos.cartes.domain.Menu;
+import fr.duforat.demos.cartes.repository.MenuRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
