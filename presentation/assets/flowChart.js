@@ -49,8 +49,11 @@ export default class extends React.Component {
 		layout: 'cartesian',
 		orientation: 'vertical',
 		linkType: 'step',
-		stepPercent: 0.5
-	};
+		stepPercent: 0.0,
+		direction: 'bottom-to-top'
+	}; // direction : bottom-to-top or top-to-bottom
+	// in case of orientation vertical
+	// see https://bl.ocks.org/mbostock/3184089
   }
 
   render() {
@@ -65,7 +68,7 @@ export default class extends React.Component {
       }
     } = this.props;
     
-    const { layout, orientation, linkType, stepPercent } = this.state;
+    const { layout, orientation, linkType, stepPercent, direction } = this.state;
 
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
@@ -82,7 +85,12 @@ export default class extends React.Component {
       sizeWidth = 2 * Math.PI;
       sizeHeight = Math.min(innerWidth, innerHeight) / 2;
     } else {
-      origin = { x: 0, y: 0 };
+	  if (direction === 'bottom-to-top') {
+        origin = { x: 0, y: innerHeight - margin.top };
+	  }
+	  else {
+		origin = { x: 0, y: 0 };
+	  }
       if (orientation === 'vertical') {
         sizeWidth = innerWidth;
         sizeHeight = innerHeight;
@@ -149,6 +157,7 @@ export default class extends React.Component {
                         strokeWidth="1"
                         fill="none"
                         key={i}
+						y={data => direction === 'bottom-to-top' ? 25 - data.y : data.y }
                         onClick={data => event => {
                           console.log(data);
                         }}
@@ -168,7 +177,12 @@ export default class extends React.Component {
                       left = radialX;
                     } else {
                       if (orientation === 'vertical') {
-                        top = node.y;
+						if (direction === 'bottom-to-top') {
+                          top = height - node.y;
+						}
+						else {
+						  top = node.y;
+						}
                         left = node.x;
                       } else {
                         top = node.x;
