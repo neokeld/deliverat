@@ -16,6 +16,12 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@babel/runtime": "^7.1.2",
+    "@vx/gradient": "^0.0.183",
+    "@vx/group": "^0.0.183",
+    "@vx/hierarchy": "^0.0.183",
+    "@vx/shape": "^0.0.183",
+    "d3-hierarchy": "^1.1.8",
+    "d3-shape": "^1.2.2",
     "normalize.css": "8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

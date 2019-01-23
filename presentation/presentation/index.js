@@ -44,6 +44,9 @@ require('../assets/arrow.css');
 // Import arrow component
 import { Arrow } from '../assets/arrow';
 
+// Import flow chart component
+import FlowChart from '../assets/flowChart';
+
 const theme = createTheme(
   {
     primary: 'white',
@@ -132,6 +135,10 @@ export default class Presentation extends React.Component {
 		  <Logo></Logo>
 		  <Image src={images.design} width={600} />
 		  <Text textSize={12} textColor="tertiary" caps>Architecture</Text>
+        </Slide>
+		<Slide>
+		  <Logo></Logo>
+          <FlowChart width={640} height={480}></FlowChart>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
 		    <Logo></Logo>
