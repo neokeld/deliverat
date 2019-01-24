@@ -5,6 +5,10 @@ Monorepo for the KataKafka
 
 Learn Kafka connecting the microservices of an imaginary delivery service "Deliverat".
 
+## Presentation
+
+[KataKafka Web Presentation](https://blog.dema.in/prez/?fg)
+
 ## Design
 
 ![KataKafka Architecture](design/KataKafka.png)
