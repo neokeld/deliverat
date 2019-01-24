@@ -47,6 +47,9 @@ import { Arrow } from '../assets/arrow';
 // Import flow chart component
 import FlowChart from '../assets/flowChart';
 
+// Import rectangle component
+import Rect from '../assets/rect';
+
 const theme = createTheme(
   {
     primary: 'white',
@@ -138,7 +141,10 @@ export default class Presentation extends React.Component {
         </Slide>
 		<Slide>
 		  <Logo></Logo>
-          <FlowChart width={640} height={480}></FlowChart>
+          <Rect width={640} height={480}>
+			<FlowChart width={640} height={480}></FlowChart>
+		  </Rect>
+		  <Text textSize={12} textColor="tertiary" caps>Architecture</Text>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
 		    <Logo></Logo>

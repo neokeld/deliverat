@@ -50,6 +50,7 @@ export default class extends React.Component {
 		orientation: 'vertical',
 		linkType: 'step',
 		stepPercent: 0.0,
+		backgroundRect: false,
 		direction: 'bottom-to-top'
 	}; // direction : bottom-to-top or top-to-bottom
 	// in case of orientation vertical
@@ -68,7 +69,7 @@ export default class extends React.Component {
       }
     } = this.props;
     
-    const { layout, orientation, linkType, stepPercent, direction } = this.state;
+    const { layout, orientation, linkType, stepPercent, backgroundRect, direction } = this.state;
 
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
@@ -101,10 +102,10 @@ export default class extends React.Component {
     }
 
     return (
-      <div>
-        <svg width={width} height={height}>
-          <rect width={width} height={height} rx={14} fill="#272b4d" />
           <Group top={margin.top} left={margin.left}>
+		  { backgroundRect &&
+              <rect width={width} height={height} rx={14} fill="#272b4d" />
+		  }
             <Tree
               root={hierarchy(data, d => (d.isExpanded ? d.children : null))}
               size={[sizeWidth, sizeHeight]}
@@ -239,8 +240,6 @@ export default class extends React.Component {
               )}
             </Tree>
           </Group>
-        </svg>
-      </div>
     );
   }
 }
