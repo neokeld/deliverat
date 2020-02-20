@@ -82,7 +82,7 @@ The spectacular [spectacle](https://github.com/FormidableLabs/spectacle).
 
 ## License
 
-Copyright (c) 2018 Arnaud Duforat
+Copyright (c) 2018-2020 Arnaud Duforat
 
 See LICENSE file to know more (MIT License).
 
