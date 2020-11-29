@@ -1,15 +1,15 @@
 {
   "name": "deliverat-react-commande",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.0",
     "normalize.css": "^8.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-lines-ellipsis": "^0.14.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,6 +28,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "json-server": "^0.16.0"
+    "json-server": "^0.16.3"
   }
 }
